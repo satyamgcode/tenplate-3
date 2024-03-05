@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+
+/* Header */
+.topbar {
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.toprow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    height: 50px;
+}
+
+.headlogo {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.topnav {
+    width: 100%;
+    padding: 0;
+    transition: all 0.3s;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    width: 100%;
+    list-style: none;
+}
+
+.navitems {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: all 0.1s;
+    text-decoration: none;
+}
+
+.navitems:hover {
+    color: rgb(27, 35, 46);
+    background-color: #F4F4F4;
+}
+
+/* buttons for navbar */
+.menu-btn {
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
+}
+
+.menu-btn svg {
+    height: 20px;
+    width: 20px;
+}
+
+.topbar.hide .topnav {
+    height: 0;
+}
+
+/* over button */
+.current {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    flex-direction: column;
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
+.bigsnap {
+    background-color: rgb(233, 231, 231);
+    margin-top: 4rem;
+    /* height: 18rem; */
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
+    padding: 3rem 2rem;
+    font-size: 1rem;
+}
+
+.phead {
+    font-size: 3.5rem;
+}
+
+.btn {
+    background-color: rgb(95, 146, 213);
+    border: none;
+    border-radius: 0.15rem;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 0.5rem;
+}
+
+/* cards aftre hero section */
+.heading {
+    padding-top: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.innerheading {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.innerheading h2 {
+    margin-bottom: 0.5rem;
+    display: inline;
+    font-weight: 500;
+}
+
+.innerheading p {
+    margin-top: 0.5rem;
+    display: inline;
+    font-size: 1rem;
+    margin-left: 0.8rem;
+}
+
+.posts {
+    padding-bottom: 3rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+    width: 100%;
+    max-width: 280px;
+    min-width: 180px;
+    background-color: #fff;
+    padding: 0.2rem;
+}
+
+.innercard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ccc;
+}
+
+.carditems {
+    padding: 0.4rem;
+}
+
+.carditems h5 {
+    /* margin-bottom: 0.5rem; */
+    margin-top: 0.2rem auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.carditems p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+}
+
+span {
+    color: gray;
+}
+
+.footer {
+    padding: 3rem;
+    border-top: 1px solid #ccc;
+}
+
+.label {
+    font-size: 1rem;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.btn1 {
+    height: 1.8rem;
+    width: 6rem;
+    background-color: rgb(95, 146, 213);
+    border: none;
+    border-radius: 0.15rem;
+}
+
+.btn2 {
+    height: 1.8rem;
+    width: 6rem;
+    margin-left: 1rem;
+    border-radius: 0.15rem;
+    border: 1px solid gray;
+}
+
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0 0.8rem;
+    }
+
+    .topnav {
+        display: flex;
+        margin-left: 2rem;
+        height: unset !important;
+    }
+
+
+    .navbar li {
+        max-width: max-content;
+    }
+
+    .navitems {
+        margin: 0 0.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+@media (max-width:504px) {
+    .posts {
+        place-items: center;
+    }
+}
