@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    background-color: #f4f4f4;
+    line-height: 1.5;
+}
+
+
+/* Header */
+.topbar {
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.toprow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    height: 50px;
+}
+
+.headlogo {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/*  css buttons */
+.menu-btn {
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
+}
+
+.menu-btn svg {
+    height: 20px;
+    width: 20px;
+}
+
+.topbar.hide .topnav {
+    height: 0;
+}
+
+/* button over */
+
+.topnav {
+    width: 100%;
+    padding: 0;
+    transition: all 0.3s;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    width: 100%;
+    list-style: none;
+}
+
+.navitems {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: all 0.1s;
+    text-decoration: none;
+}
+
+.navitems:hover {
+    color: rgb(27, 35, 46);
+    background-color: #F4F4F4;
+}
+
+/* Content */
+.current {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.heading {
+    max-width: 1024px;
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+.innerheading {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.innerheading h2 {
+    margin-bottom: 0.5rem;
+    display: inline;
+    font-weight: 500;
+}
+
+.innerheading p {
+    margin-top: 0.5rem;
+    display: inline;
+    font-size: 1rem;
+    margin-left: 0.8rem;
+}
+
+.posts {
+    padding-bottom: 3rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    width: 100%;
+    max-width: 380px;
+    min-width: 280px;
+    background-color: #fff;
+}
+
+.innercard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ccc;
+}
+
+.carditems {
+    padding: 0.8rem;
+}
+
+.carditems h5 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(90, 186, 234);
+}
+
+.carditems p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+}
+
+span {
+    color: gray;
+}
+
+.footer {
+    padding: 1rem 0.8rem;
+    border-top: 1px solid #ccc;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+/*  responsive design */
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0 0.8rem;
+    }
+
+    .topnav {
+        display: flex;
+        margin-left: 2rem;
+        height: unset !important;
+    }
+
+
+    .navbar li {
+        max-width: max-content;
+    }
+
+    .navitems {
+        margin: 0 0.5rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+@media (max-width: 622px) {
+    .posts {
+        place-items: center;
+    }
+}
